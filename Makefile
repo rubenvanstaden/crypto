@@ -6,4 +6,4 @@ build:
 	go build -o ./bin/crypto ./cmd/*.go
 
 install:
-	cp ./bin/crypto $(HOME)/go/bin/
+	cp -f ./bin/crypto $(HOME)/go/bin/

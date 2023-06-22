@@ -3,6 +3,8 @@ package main
 import (
 	"flag"
 	"log"
+
+	"github.com/rubenvanstaden/crypto"
 )
 
 func main() {
@@ -22,9 +24,9 @@ func main() {
 	}
 
 	if nsec != "" {
-		sk := GeneratePrivateKey()
+		sk := crypto.GeneratePrivateKey()
 
-		pk, err := GetPublicKey(sk)
+		pk, err := crypto.GetPublicKey(sk)
 		if err != nil {
 			log.Fatal("unable to generate public key")
 		}
