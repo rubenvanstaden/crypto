@@ -1,8 +1,8 @@
 package main
 
 import (
-	"log"
 	"flag"
+	"log"
 )
 
 func main() {
@@ -15,21 +15,21 @@ func main() {
 	nsec := ""
 
 	if len(args) > 0 {
-        // Generate a new private, public key pair.
+		// Generate a new private, public key pair.
 		if args[0] == "gen" && len(args) == 1 {
 			nsec = args[0]
 		}
 	}
 
 	if nsec != "" {
-        sk := GeneratePrivateKey()
+		sk := GeneratePrivateKey()
 
-        pk, err := GetPublicKey(sk)
-        if err != nil {
-            log.Fatal("unable to generate public key")
-        }
+		pk, err := GetPublicKey(sk)
+		if err != nil {
+			log.Fatal("unable to generate public key")
+		}
 
-        log.Printf("nsec: %s", sk)
-        log.Printf("npub: %s", pk)
-    }
+		log.Printf("nsec: %s", sk)
+		log.Printf("npub: %s", pk)
+	}
 }
