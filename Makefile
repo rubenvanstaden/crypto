@@ -3,7 +3,7 @@ fmt:
 	gofmt -l -s -w .
 
 build:
-	go build -o ./bin/crypto ./cmd/*.go
+	go build -o ./bin/nkey ./cmd/*.go
 
 install:
-	cp -f ./bin/crypto $(HOME)/go/bin/
+	cp -f ./bin/nkey $(HOME)/go/bin/
